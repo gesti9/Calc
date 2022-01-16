@@ -1,8 +1,7 @@
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Objects;
 
-public class Person {
+    public class Person {
         String firstName;
         String iin;
 
@@ -11,8 +10,29 @@ public class Person {
             this.iin = iin;
         }
 
+        public boolean equals(Object o){
+            if(o instanceof Person){
+                Person anotherPerson = (Person)o;
 
-    public static void main(String[] args) {
+                if (firstName.equals(anotherPerson.firstName)) {
+                    if (iin.equals(anotherPerson.iin)){
+                        return true;
+                    }else {
+                        return false;
+                    }
+                }else {
+                    return false;
+                }
+            } else {
+                return false;
+            }
+        }
+
+        public int hashCode(){
+          return   firstName.hashCode() + iin.hashCode();
+        }
+
+        public static void main(String[] args) {
          Person sultan = new Person("Sultan","93299323929");
          Person sultan2 = new Person("Sulta1","93299323932");
 
