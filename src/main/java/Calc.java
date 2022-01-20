@@ -20,11 +20,16 @@ public class Calc {
                     System.out.println(x * y);
                     break;
                 case "/":
-                    System.out.println(x / y);
+                    if (y == 0) {
+                        System.out.println("Нельзя делить на 0");
+                    }else {
+                        System.out.println(x / y);
+                    }
                     break;
                 default:
-                    System.out.println("Ошибка");
+                    System.out.println("Ошибка вы ввели не верный символ!");
             }
+
         }catch (InputMismatchException e){
             System.out.println("Вы ввели не верные данные!");
         }
