@@ -6,7 +6,7 @@ public class Calc {
     public static void main(String[] args) {
         double x;
         int a = 1;
-        while (a == 1) {
+        while (true) {
             Scanner scanner = null;
             try {
                 scanner = new Scanner(System.in);
@@ -37,14 +37,7 @@ public class Calc {
             } catch (InputMismatchException e) {
                 System.out.println("Вы ввели не верные данные!");
             }
-            System.out.println("Закрыть программу? ");
-            String otvet = scanner.next();
-            if (otvet == "Da") {
-                break;
-            }else{
-                System.out.println("Вы можете продолжать ");
-                continue;
-            }
+
         }
     }
 }
