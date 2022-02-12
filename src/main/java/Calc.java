@@ -8,7 +8,6 @@ public class Calc {
             switch (sign) {
                 case "+":
                     return PLUS;
-
                 case "-":
                     return MINUS;
                 case "*":
@@ -17,27 +16,22 @@ public class Calc {
                     return RAZDELIT;
                 case "^":
                     return STEPEN;
-
                 default:
                     throw new RuntimeException("Не тот символ");
             }
         }
-
 
         public void Rezultat(double x, double y){
             switch (this) {
                 case PLUS:
                     System.out.println(x + y);
                     break;
-
                 case MINUS:
                     System.out.println(x - y);
                     break;
-
                 case UMNOZHIT:
                     System.out.println(x * y);
                     break;
-
                 case RAZDELIT:
                     if (y == 0) {
                         System.out.println("Нельзя делить на 0");
