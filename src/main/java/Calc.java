@@ -24,26 +24,26 @@ public class Calc {
         public void Rezultat(double x, double y){
             switch (this) {
                 case PLUS:
-                    System.out.println(x + y);
+                    PrintUtils.printMassage(x + y);
                     break;
                 case MINUS:
-                    System.out.println(x - y);
+                    PrintUtils.printMassage(x - y);
                     break;
                 case UMNOZHIT:
-                    System.out.println(x * y);
+                    PrintUtils.printMassage(x * y);
                     break;
                 case RAZDELIT:
                     if (y == 0) {
-                        System.out.println("Нельзя делить на 0");
+                        PrintUtils.printMassage("Нельзя делить на 0");
                     } else {
-                        System.out.println(x / y);
+                        PrintUtils.printMassage(x / y);
                     }
                     break;
                 case STEPEN:
-                    System.out.println(Math.pow(x,y));
+                    PrintUtils.printMassage(Math.pow(x,y));
                     break;
                 default:
-                    System.out.println("Ошибка вы ввели не верный символ!");
+                    PrintUtils.printMassage("Ошибка вы ввели не верный символ!");
             }
         }
     }
